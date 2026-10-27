@@ -698,8 +698,10 @@ blockquote {
 /* ══════════════════════════════ RESPONSIVE — TABLET (≤900px) ══ */
 @media (max-width: 900px) {
   .service-split              { grid-template-columns: 1fr; }
-  .service-split-reverse .split-photo     { order: unset; }
-  .service-split-reverse .split-text-card { order: unset; }
+  .service-split .split-photo              { order: 2; }
+  .service-split .split-text-card          { order: 1; }
+  .service-split-reverse .split-photo      { order: 2; }
+  .service-split-reverse .split-text-card  { order: 1; }
   .split-photo                { min-height: 300px; }
   .split-text-card            { padding: 48px 40px; }
   .split-layout               { display: flex; flex-direction: column; gap: 0; }
