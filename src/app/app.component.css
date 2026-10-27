@@ -1,19 +1,10 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+:host {
+  display: block;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+main {
   min-height: 100vh;
-  text-align: center;
-}
-
-h1 {
-  font-size: 3rem;
-  color: #2c3e50;
-  margin-bottom: 1rem;
-}
-
-p {
-  font-size: 1.2rem;
-  color: #7f8c8d;
+  overflow-x: hidden;
 }

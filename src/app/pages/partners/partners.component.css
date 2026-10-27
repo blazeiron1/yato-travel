@@ -1,0 +1,193 @@
+.p-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background: linear-gradient(160deg, #1e3d4a 0%, #3E6E7E 60%, #1a2e38 100%);
+  display: flex;
+  align-items: center;
+}
+
+.p-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+}
+
+.p-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.p-hero-content h1 {
+  font-size: clamp(44px, 6vw, 72px);
+  font-weight: 400;
+  color: #fff;
+  margin: 16px 0 24px;
+  line-height: 1.1;
+}
+
+.p-hero-content h1 em {
+  font-style: italic;
+  color: #DBC3A5;
+}
+
+.p-hero-content p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  max-width: 420px;
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+/* YOU KNOW / WE KNOW */
+.knowground-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.know-col h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  color: #2F4A3C;
+  margin-top: 8px;
+}
+
+.know-col p {
+  font-size: 13px;
+  color: #5a6b64;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+.know-image {
+  height: 480px;
+  background: linear-gradient(135deg, #3E6E7E 0%, #2F4A3C 100%);
+}
+
+/* WHAT WE OFFER */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.offer-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 32px 24px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.offer-card:hover { background: rgba(255,255,255,0.1); }
+
+.offer-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+}
+
+.offer-icon svg { width: 100%; height: 100%; }
+
+.offer-card h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.offer-card p {
+  font-size: 12px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+}
+
+/* DESTINATIONS */
+.destinations { background: #EAE6DF; }
+
+.destinations h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  color: #2F4A3C;
+  margin-top: 8px;
+}
+
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.dest-tile {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dest-tile:hover .dest-tile-overlay {
+  background: rgba(47,74,60,0.6);
+}
+
+.dest-nm { background: linear-gradient(135deg, #2F4A3C, #3E6E7E); }
+.dest-al { background: linear-gradient(135deg, #C57F5D, #DBC3A5); }
+.dest-ko { background: linear-gradient(135deg, #3E6E7E, #B08D57); }
+.dest-other { background: linear-gradient(135deg, #B08D57, #2F4A3C); }
+
+.dest-tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+
+.dest-name {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* CTA */
+.p-cta {
+  background: #EAE6DF;
+  padding: 100px 0;
+}
+
+.p-cta h2 {
+  font-size: clamp(28px, 3.5vw, 42px);
+  color: #2F4A3C;
+  margin-bottom: 16px;
+}
+
+.p-cta p {
+  font-size: 14px;
+  color: #5a6b64;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .knowground-inner { grid-template-columns: 1fr; gap: 40px; }
+  .know-image { height: 300px; }
+  .offer-grid { grid-template-columns: repeat(2, 1fr); }
+  .dest-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .offer-grid { grid-template-columns: 1fr; }
+  .dest-grid { grid-template-columns: 1fr; }
+}

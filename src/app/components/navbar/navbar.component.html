@@ -1,0 +1,28 @@
+<nav class="navbar" [class.scrolled]="isScrolled" [class.hidden]="isHidden">
+  <div class="nav-inner container">
+
+    <a class="nav-logo" (click)="scrollTo('hero')" style="cursor:pointer;">
+      <img class="logo-img" src="assets/yato-logo-notagline-white-copper.png" alt="YATO Travel">
+    </a>
+
+    <div class="nav-links">
+      <a (click)="scrollTo('companies')">For Companies & MICE</a>
+      <a (click)="scrollTo('partners')">For Travel Partners</a>
+      <a (click)="scrollTo('about')">About</a>
+      <a (click)="scrollTo('contact')">Contact</a>
+      <a (click)="scrollTo('contact')" class="nav-cta">Work With YATO</a>
+    </div>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <a (click)="scrollTo('companies')">For Companies & MICE</a>
+    <a (click)="scrollTo('partners')">For Travel Partners</a>
+    <a (click)="scrollTo('about')">About</a>
+    <a (click)="scrollTo('contact')">Contact</a>
+    <a (click)="scrollTo('contact')" class="mobile-cta">Work With YATO</a>
+  </div>
+</nav>

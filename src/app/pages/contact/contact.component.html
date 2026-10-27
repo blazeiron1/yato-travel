@@ -1,0 +1,83 @@
+<!-- CONTACT HERO -->
+<section class="ct-hero">
+  <div class="ct-hero-overlay"></div>
+  <div class="container ct-hero-inner">
+    <div class="ct-hero-text">
+      <span class="eyebrow">Let's Create Something Together</span>
+      <h1>Tell us who is travelling,<br>what matters to them,<br><em>and what you'd like to achieve.</em></h1>
+      <div class="gold-divider"></div>
+      <p>We'll take it from there.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <span>+389 71 229 303</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <span>irena&#64;yato.travel</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Based in</span>
+          <span>Ohrid, North Macedonia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ct-form-wrap">
+      <div *ngIf="!submitted" class="ct-form">
+        <h3>Request a Programme</h3>
+        <div class="gold-divider"></div>
+        <form (ngSubmit)="onSubmit()" #f="ngForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" [(ngModel)]="form.name" name="name" required placeholder="Full name" />
+            </div>
+            <div class="form-group">
+              <label>Company / Agency</label>
+              <input type="text" [(ngModel)]="form.company" name="company" placeholder="Organisation" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" [(ngModel)]="form.email" name="email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label>You Are Planning a...</label>
+            <select [(ngModel)]="form.type" name="type">
+              <option value="">Select journey type</option>
+              <option value="incentive">Incentive Travel</option>
+              <option value="retreat">Leadership Retreat</option>
+              <option value="tailor">Tailor-Made Journey</option>
+              <option value="small-group">Small Group Tour</option>
+              <option value="special">Special-Interest Travel</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Group Size</label>
+              <input type="text" [(ngModel)]="form.groupSize" name="groupSize" placeholder="e.g. 12 people" />
+            </div>
+            <div class="form-group">
+              <label>Preferred Destination</label>
+              <input type="text" [(ngModel)]="form.destination" name="destination" placeholder="e.g. North Macedonia" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Tell Us More</label>
+            <textarea [(ngModel)]="form.message" name="message" rows="4" placeholder="Dates, goals, anything that would help us understand what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;">Send Request →</button>
+        </form>
+      </div>
+
+      <div *ngIf="submitted" class="ct-success">
+        <div class="success-icon">✓</div>
+        <h3>Thank you.</h3>
+        <p>We've received your request and will be in touch within one working day.</p>
+        <p class="success-sub">Go Together. Feel Free.</p>
+      </div>
+    </div>
+  </div>
+</section>

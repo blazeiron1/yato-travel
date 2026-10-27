@@ -1,0 +1,207 @@
+:host {
+  display: block;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+  background: transparent;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.scrolled {
+  background: #F3F2EE;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+.navbar.scrolled .nav-links a { color: rgba(47,74,60,0.75); }
+.navbar.scrolled .nav-links a:hover,
+.navbar.scrolled .nav-links a.active { color: #2F4A3C; }
+
+.navbar.scrolled .nav-links a::after { background-color: #B08D57; }
+.navbar.scrolled .nav-cta {
+  background: #2F4A3C !important;
+  border-color: #2F4A3C !important;
+  color: #fff !important;
+}
+.navbar.scrolled .nav-cta:hover {
+  background: transparent !important;
+  border-color: #2F4A3C !important;
+  color: #2F4A3C !important;
+}
+.navbar.scrolled .hamburger span { background: #2F4A3C; }
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.logo-img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+.navbar.scrolled .logo-img {
+  filter: invert(1);
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #DBC3A5;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #DBC3A5;
+}
+
+.nav-cta {
+  background: #2F4A3C !important;
+  border: none !important;
+  border-radius: 13px;
+  padding: 11px 28px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: #fff !important;
+  transition: all 0.25s ease !important;
+  cursor: pointer;
+}
+
+.nav-cta::after { display: none !important; }
+
+.nav-cta:hover {
+  background: #243b2f !important;
+  border-color: #243b2f !important;
+  color: #fff !important;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: #fff;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #2F4A3C;
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.mobile-menu.open {
+  max-height: 400px;
+  padding: 24px;
+}
+
+.mobile-menu a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: block;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.mobile-menu a:hover { color: #B08D57; }
+
+.mobile-cta {
+  color: #B08D57 !important;
+  margin-top: 8px;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .nav-links  { display: none; }
+  .hamburger  { display: flex; }
+  .mobile-menu { display: flex; }
+}
+
+@media (max-width: 600px) {
+  .nav-inner  { height: 64px; }
+  .logo-text  { font-size: 22px; }
+  .logo-img { height: 48px; }
+
+  .mobile-menu a  { font-size: 12px; padding: 14px 0; letter-spacing: 1.5px; }
+  .mobile-menu.open { padding: 20px 20px; }
+}
