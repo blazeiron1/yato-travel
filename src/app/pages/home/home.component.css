@@ -9,7 +9,7 @@
   position: relative;
   height: 100vh;
   min-height: 640px;
-  background-image: url('/assets/home.JPG');
+  background-image: url('/assets/home-1.JPG');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -74,6 +74,7 @@
 
 .split-photo-partners {
   background-image: url('/assets/travel.jpg');
+  background-position: center 85% !important;
 }
 
 .split-text-card {
