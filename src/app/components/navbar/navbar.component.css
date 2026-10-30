@@ -60,9 +60,6 @@
   display: block;
 }
 
-.navbar.scrolled .logo-img {
-  filter: invert(1);
-}
 
 /* Nav links */
 .nav-links {
