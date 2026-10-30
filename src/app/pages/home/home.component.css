@@ -9,7 +9,7 @@
   position: relative;
   height: 100vh;
   min-height: 640px;
-  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80');
+  background-image: url('/assets/home.JPG');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -57,7 +57,7 @@
 .service-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 420px;
+  min-height: 500px;
 }
 
 .service-split-reverse .split-photo     { order: 2; }
@@ -69,7 +69,7 @@
 }
 
 .split-photo-companies {
-  background-image: url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=900&q=80');
+  background-image: url('/assets/company.jpg');
 }
 
 .split-photo-partners {
@@ -211,7 +211,7 @@
 }
 
 .companies-img {
-  background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80');
+  background-image: url('/assets/company-2.jpg');
   background-size: cover;
   background-position: center;
 }
