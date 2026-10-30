@@ -23,6 +23,7 @@
   box-shadow: 0 2px 20px rgba(0,0,0,0.08);
 }
 
+.navbar.scrolled .logo-img { filter: invert(1) hue-rotate(180deg); }
 .navbar.scrolled .nav-links a { color: rgba(47,74,60,0.75); }
 .navbar.scrolled .nav-links a:hover,
 .navbar.scrolled .nav-links a.active { color: #2F4A3C; }
