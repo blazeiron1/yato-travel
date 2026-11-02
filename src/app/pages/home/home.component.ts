@@ -20,6 +20,7 @@ export class HomeComponent implements AfterViewInit {
     message: ''
   };
   submitted = false;
+  submitting = false;
 
   scrollTo(id: string): void {
     const el = document.getElementById(id);
@@ -27,7 +28,25 @@ export class HomeComponent implements AfterViewInit {
   }
 
   onSubmit(): void {
-    this.submitted = true;
+    this.submitting = true;
+    fetch('https://formspree.io/f/mqppgaaq', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: this.form.name,
+        email: this.form.email,
+        company: this.form.company,
+        type: this.form.type,
+        groupSize: this.form.groupSize,
+        destination: this.form.destination,
+        message: this.form.message
+      })
+    }).then(res => {
+      this.submitting = false;
+      if (res.ok) this.submitted = true;
+    }).catch(() => {
+      this.submitting = false;
+    });
   }
 
   ngAfterViewInit(): void {
