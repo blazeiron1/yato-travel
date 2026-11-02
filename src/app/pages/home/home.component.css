@@ -162,6 +162,13 @@
   justify-content: center;
 }
 
+.why-yato-content .section-header,
+.why-yato-content .section-header h2,
+.why-yato-content .section-header span {
+  text-align: left;
+  width: 100%;
+}
+
 .section-header.center { text-align: center; }
 
 .section-header h2 {
@@ -174,11 +181,12 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
   margin-top: 18px;
+  width: 100%;
 }
 
-.create-item { text-align: center; }
+.create-item { text-align: left; }
 
-.create-icon { width: 36px; height: 36px; margin: 0 auto 10px; }
+.create-icon { width: 36px; height: 36px; margin: 0 0 10px; }
 .create-icon svg { width: 100%; height: 100%; }
 
 .create-item h4 {
