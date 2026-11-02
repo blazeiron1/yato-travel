@@ -42,7 +42,7 @@
 
 .hero-sub {
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.8;
   color: rgba(255,255,255,0.8);
   max-width: 480px;
@@ -69,7 +69,7 @@
 }
 
 .split-photo-companies {
-  background-image: url('/assets/company.jpg');
+  background-image: url('/assets/company-3.jpg');
 }
 
 .split-photo-partners {
@@ -113,8 +113,9 @@
 
 .split-text-card p {
   font-size: 13px;
-  line-height: 1.8;
-  color: rgba(47,74,60,0.7);
+  font-weight: 500;
+  line-height: 1.85;
+  color: #5a6b64;
   margin-bottom: 28px;
   max-width: 380px;
 }
@@ -138,7 +139,28 @@
 .card-link:hover { color: #B08D57; }
 
 /* ══════════════════════════════ WHAT WE CREATE ════════════════ */
-.what-we-create { background: #F3F2EE; padding: 100px 0; }
+.what-we-create { background: #F3F2EE; }
+
+.why-yato-split {
+  display: flex;
+  min-height: 300px;
+}
+
+.why-yato-photo {
+  flex: 0 0 38%;
+  background-image: url('/assets/work.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 260px;
+}
+
+.why-yato-content {
+  flex: 1;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .section-header.center { text-align: center; }
 
@@ -149,14 +171,14 @@
 
 .create-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  margin-top: 60px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 18px;
 }
 
 .create-item { text-align: center; }
 
-.create-icon { width: 56px; height: 56px; margin: 0 auto 20px; }
+.create-icon { width: 36px; height: 36px; margin: 0 auto 10px; }
 .create-icon svg { width: 100%; height: 100%; }
 
 .create-item h4 {
@@ -168,8 +190,9 @@
 
 .create-item p {
   font-size: 12px;
+  font-weight: 500;
   line-height: 1.75;
-  color: #5a6b64;
+  color: #2e3d38;
 }
 
 /* ══════════════════════════════ COMPANIES ═════════════════════ */
@@ -259,6 +282,7 @@
 
 .approach-step p {
   font-size: 12px;
+  font-weight: 500;
   line-height: 1.75;
   color: #5a6b64;
 }
@@ -292,7 +316,7 @@
   background-size: cover; background-position: center;
 }
 .exp-4 {
-  background-image: url('/assets/wellnes.webp');
+  background-image: url('/assets/nature.jpg');
   background-size: cover; background-position: center;
 }
 
@@ -466,6 +490,7 @@
 
 .about-content p {
   font-size: 13px;
+  font-weight: 500;
   color: #5a6b64;
   line-height: 1.85;
   margin-top: 14px;
@@ -735,9 +760,12 @@ blockquote {
   .split-text-card p          { max-width: 100%; }
 
   /* What We Create */
-  .what-we-create             { padding: 56px 0; overflow: visible; }
-  .create-grid                { display: flex; flex-direction: row; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; gap: 16px; margin-top: 32px; padding: 0 20px 16px; }
-  .create-item                { flex: 0 0 72vw; scroll-snap-align: start; }
+  .what-we-create             { overflow: visible; }
+  .why-yato-split             { flex-direction: column; }
+  .why-yato-photo             { flex: none; min-height: 280px; width: 100%; order: 2; }
+  .why-yato-content           { padding: 48px 24px; order: 1; }
+  .create-grid                { grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 32px; }
+  .create-item                { }
 
   /* Companies */
   .companies-section          { padding: 56px 0; overflow: visible; }
