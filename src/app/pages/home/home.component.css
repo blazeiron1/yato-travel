@@ -435,8 +435,10 @@
 
 .about-image {
   background-image: url('/assets/irena.jpg');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center top;
+  background-color: #f5f3ef;
 }
 
 .about-content {
